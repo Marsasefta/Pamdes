@@ -22,7 +22,7 @@
                         <tr>
                             <th>Nomor Rekening</th>
                             <th>Nama Pelanggan</th>
-                            <th>Jumlah Yang Dibayar</th>
+                            <th>Jumlah Tagihan</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -41,13 +41,13 @@
                             
                             <td>
                                 <div class="row">
-                                    <div class="col">
+                                    {{-- <div class="col">
                                         <a class="btn btn-success btn-block" data-bs-toggle="modal">
                                             <i class="far fa-eye"></i>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                     <div class="col">
-                                        <a class="btn btn-warning btn-block" data-bs-toggle="modal">
+                                        <a class="btn btn-warning btn-block" data-bs-toggle="modal" data-bs-target="#editModal{{ $post->id }}">
                                             <i class="far fa-edit"></i>
                                         </a>
                                     </div>
@@ -62,6 +62,7 @@
                                 </div>
                             </td>
                         </tr>
+                        @include('modal.edit_modal')
                         @empty
                         {{-- <tr class="text-center">
                             <td colspan="6">
