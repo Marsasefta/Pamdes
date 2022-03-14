@@ -40,9 +40,30 @@ public function store(Request $request)
 			]);
 	}}
 
+	/**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Pelanggan  $pelanggan
+     * @return \Illuminate\Http\Response
+     */
+
+	public function update(Request $request, $id)
+    {
+		
+		$post = Pelanggan::findOrFail($id);
+		$post->Rekening = $request->Rekening;
+		$post->Nama = $request->Nama;
+		$post->Jumlah = $request->Jumlah;
+        $post->update($request->all());
+        return redirect()->route('dashboard')->with('success', 'Data Customer Berhasil Diupdate');
+    }
+
+
 	public function destroy($id)
     {
 		DB::table('pelanggans')->where('id', $id)->delete();
 		return redirect('dashboard') ->with('data', 'berhasil dihapus!');
     }
+
 }

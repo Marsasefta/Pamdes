@@ -35,3 +35,8 @@ Route::post('/dashboard/store', 'AdminController@store');
 
 
 Route::delete('/delete/{id}', 'AdminController@destroy')->name('delete');
+Route::put('/editdata/{id}', 'AdminController@update');
+
+Route::resources([
+    'pelanggans' => AdminController::class
+]);

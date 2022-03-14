@@ -5,7 +5,7 @@
         <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" action="{{ route('pelanggans.update', ['pelanggan' => $post->id]) }}" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="modal-body">
@@ -24,10 +24,9 @@
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Update Data</button>
+            <button type="submit" class="btn btn-primary">Edit Data</button>
             </div>
         </form>
     </div>
 </div>
 
-{{-- action="{{ route('barang-import.update', $post->id) }}" --}}
