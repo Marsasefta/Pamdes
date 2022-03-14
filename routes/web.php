@@ -32,3 +32,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'AdminController@index')->name('dashboard');
 Route::post('/dashboard/store', 'AdminController@store');
+
+
+Route::delete('/delete/{id}', 'AdminController@destroy')->name('delete');

@@ -52,10 +52,11 @@
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');>
-                                            @csrf
-                                            @method('delete')
-                                            <button type="submit" class="btn btn-danger btn-block"><i class="far fa-trash-alt"></i></button>
+                                        <form method="POST" onsubmit="return confirm('Apakah Anda Yakin Akan Menghapus Data?')" action="{{ route('delete',  $post->id) }}" >
+                                            
+                                            @csrf 
+                                            @method('delete') 
+                                            <button type="submit"  class="btn btn-danger btn-block"><i class="far fa-trash-alt"></i></button>
                                         </form>
                                     </div>
                                 </div>

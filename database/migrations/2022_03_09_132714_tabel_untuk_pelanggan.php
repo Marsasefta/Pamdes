@@ -31,6 +31,6 @@ class TabelUntukPelanggan extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pelanggan');
+        Schema::dropIfExists('pelanggans');
     }
 }

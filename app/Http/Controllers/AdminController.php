@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pelanggan;
+use DB;
 
 
 class AdminController extends Controller
@@ -38,4 +39,13 @@ public function store(Request $request)
 				'error' => 'Some problem occurred, please try again'
 			]);
 	}}
+
+	public function destroy($id)
+    {
+		DB::table('pelanggans')->where('id', $id)->delete();
+		
+        // $posts->delete();
+        // return redirect('dashboard')->route('posts.index')->with('success', 'Data Customer Berhasil Dihapus');
+		return redirect('dashboard')->with('data', 'berhasil dihapus!');
+    }
 }
