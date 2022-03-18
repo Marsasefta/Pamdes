@@ -18,16 +18,15 @@
             </div>
             <div class="mb-3">
                 <label for="gender" class="form-label">Jenis Kelamin</label>
-                <div class="dropdown transparentbar">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Jenis kelamin
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" for="laki" id="laki" name="laki">laki-laki</a></li>
-                      <li><a class="dropdown-item" for="perempuan" id="perempuan" name="perempuan">Perempuan</a></li>
-                     
-                    </ul>
-                  </div>
+                <div class="input-group">
+                    
+                    <select class="form-select" aria-label="Default select example" name="kategori"
+                        required>
+                        <option selected>-- Pilih Kategori --</option>
+                        <option value="Pria">Pria</option>
+                        <option value="Wanita">Wanita</option>
+                    </select>
+                </div>
             </div>
             <div class="mb-3">
                 <label for="alamat" class="form-label">Alamat</label>
