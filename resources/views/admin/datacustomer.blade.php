@@ -27,7 +27,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($posts as $post)
+                        {{-- @forelse ($posts as $post) --}}
                         <tr>
                             <td>
                                 {{-- {{ $post->Rekening}} --}}
@@ -62,14 +62,14 @@
                                 </div>
                             </td>
                         </tr>
-                        @include('modal.edit_modal')
-                        @empty
+                        {{-- @include('modal.edit_modal') --}}
+                        {{-- @empty --}}
                         {{-- <tr class="text-center">
                             <td colspan="6">
                                 Belum Ada Data
                             </td>
                         </tr> --}}
-                        @endforelse
+                        {{-- @endforelse --}}
                     </tbody>
                 </table>
             </div>

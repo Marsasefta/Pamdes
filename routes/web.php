@@ -31,6 +31,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'AdminController@index')->name('dashboard');
+Route::get('/datacustomer', 'DatacustomerController@index')->name('datacustomer');
 Route::post('/dashboard/store', 'AdminController@store');
 
 

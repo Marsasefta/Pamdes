@@ -61,7 +61,7 @@
                     <span>Dashboard Tagihan</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="datacustomer">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Pelanggan</span></a>
             </li>
