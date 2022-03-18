@@ -6,14 +6,14 @@
     <div class="row">
         <div class="col">
             <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Tambah Data
+                Tambah Customer
             </button>
-            @include('modal.add_data_modal')
+            {{-- @include('modal.add_data_modal') --}}
         </div>
     </div>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Data Tagihan Customer</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Data Pelanggan</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -30,13 +30,13 @@
                         @forelse ($posts as $post)
                         <tr>
                             <td>
-                                {{ $post->Rekening}}
+                                {{-- {{ $post->Rekening}} --}}
                             </td>
                             <td>
-                                {{ $post->Nama}}
+                                {{-- {{ $post->Nama}} --}}
                             </td>
                             <td>
-                                {{ $post->Jumlah}}
+                                {{-- {{ $post->Jumlah}} --}}
                             </td>
                             
                             <td>
@@ -47,12 +47,12 @@
                                         </a>
                                     </div> --}}
                                     <div class="col">
-                                        <a class="btn btn-warning btn-block" data-bs-toggle="modal" data-bs-target="#editModal{{ $post->id }}">
+                                        <a class="btn btn-warning btn-block" data-bs-toggle="modal" >
                                             <i class="far fa-edit"></i>
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <form method="POST" onsubmit="return confirm('Apakah Anda Yakin Akan Menghapus Data?')" action="{{ route('delete',  $post->id) }}" >
+                                        <form method="POST" onsubmit="return confirm('Apakah Anda Yakin Akan Menghapus Data?')" >
                                             
                                             @csrf 
                                             @method('delete') 
