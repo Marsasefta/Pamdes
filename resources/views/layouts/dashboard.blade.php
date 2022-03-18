@@ -58,7 +58,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Dashboard Tagihan</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Pelanggan</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="admin">
