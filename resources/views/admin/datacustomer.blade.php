@@ -8,7 +8,7 @@
             <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Tambah Customer
             </button>
-            {{-- @include('modal.add_data_modal') --}}
+            @include('modal.add_customer')
         </div>
     </div>
     <div class="card shadow mb-4">
