@@ -20,9 +20,13 @@
                 <table class="table table-bordered" id="table" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Nomor Rekening</th>
-                            <th>Nama Pelanggan</th>
-                            <th>Jumlah Tagihan</th>
+                            <th>Nama</th>
+                            <th>Rekening</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Alamat</th>
+                            <th>RT</th>
+                            <th>RW</th>
+                           
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -38,6 +42,16 @@
                             <td>
                                 {{-- {{ $post->Jumlah}} --}}
                             </td>
+                            <td>
+                                {{-- {{ $post->Jumlah}} --}}
+                            </td>
+                            <td>
+                                {{-- {{ $post->Jumlah}} --}}
+                            </td>
+                            <td>
+                                {{-- {{ $post->Jumlah}} --}}
+                            </td>
+                           
                             
                             <td>
                                 <div class="row">

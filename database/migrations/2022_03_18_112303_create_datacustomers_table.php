@@ -18,9 +18,8 @@ class CreateDatacustomersTable extends Migration
             $table->timestamps();
             $table->string('nama');
             $table->string('rekening');
-            $table->string('alamat');
-            $table->string('Jumlah');
             $table->string('gender');
+            $table->string('alamat');
             $table->string('rt');
             $table->string('rw');
         });
