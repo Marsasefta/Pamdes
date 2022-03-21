@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Datacustomer;
 use Illuminate\Http\Request;
+use DB;
 
 class DatacustomerController extends Controller
 {
@@ -40,4 +41,10 @@ class DatacustomerController extends Controller
 				'error' => 'Some problem occurred, please try again'
 			]);
 	}}
+
+    public function destroy($id)
+    {
+		DB::table('datacustomers')->where('id', $id)->delete();
+		return redirect('datacustomer')->with('data', 'berhasil dihapus!');
+    }
 }
