@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class datacustomer extends Model
 {
-    protected $fillable = ['nama', 'rekening', 'alamat', 'Jumlah', 'gender', 'rt', 'rw'];
+    protected $fillable = ['nama', 'rekening', 'alamat', 'gender', 'rt', 'rw'];
 }

@@ -33,6 +33,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'AdminController@index')->name('dashboard');
 Route::get('/datacustomer', 'DatacustomerController@index')->name('datacustomer');
 Route::post('/dashboard/store', 'AdminController@store');
+Route::post('/datacustomer/store', 'DatacustomerController@store');
 
 
 Route::delete('/delete/{id}', 'AdminController@destroy')->name('delete');

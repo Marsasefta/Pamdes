@@ -5,7 +5,7 @@
             <h5 class="modal-title" id="exampleModalLabel">Tambah Data Pelanggan</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form action="/dashboard/store" method="post" enctype="multipart/form-data">
+        <form action="/datacustomer/store" method="post" enctype="multipart/form-data">
         @csrf
         <div class="modal-body">
             <div class="mb-3">
@@ -13,18 +13,18 @@
                 <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama">
             </div>
             <div class="mb-3">
-                <label for="nomor" class="form-label">Nomor Rekening</label>
-                <input type="text" class="form-control" id="nomor" name="nomor" placeholder="Nomor">
+                <label for="rekening" class="form-label">Nomor Rekening</label>
+                <input type="text" class="form-control" id="rekening" name="rekening" placeholder="Nomor">
             </div>
             <div class="mb-3">
                 <label for="gender" class="form-label">Jenis Kelamin</label>
                 <div class="input-group">
                     
-                    <select class="form-select" aria-label="Default select example" name="kategori"
+                    <select class="form-select" aria-label="Default select example" name="gender" id="gender"
                         required>
-                        <option selected>-- Pilih Kategori --</option>
-                        <option value="Pria">Pria</option>
-                        <option value="Wanita">Wanita</option>
+                        <option selected>-- Pilih --</option>
+                        <option value="pria">Pria</option>
+                        <option value="wanita">Wanita</option>
                     </select>
                 </div>
             </div>
