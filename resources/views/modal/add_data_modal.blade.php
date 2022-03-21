@@ -10,7 +10,7 @@
         <div class="modal-body">
             <div class="mb-3">
                 <label for="Rekening" class="form-label">Nomor Rekening</label>
-                <input type="text" class="form-control" id="Rekening" name="Rekening" placeholder="No. rekening" required>
+                <input type="number" class="form-control" id="Rekening" name="Rekening" placeholder="No. rekening" required>
             </div>
             <div class="mb-3">
                 <label for="Nama" class="form-label">Nama Pelanggan</label>
@@ -18,7 +18,7 @@
             </div>
             <div class="mb-3">
                 <label for="Jumlah" class="form-label">Jumlah Yang Dibayar</label>
-                <input type="text" class="form-control" id="Jumlah" name="Jumlah" placeholder="Jumlah" >
+                <input type="number" class="form-control" id="Jumlah" name="Jumlah" placeholder="Jumlah" >
             </div>
             <div class="mb-3">
                 <label for="tanggal" class="form-label">Tanggal</label>

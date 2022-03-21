@@ -36,7 +36,8 @@ Route::post('/dashboard/store', 'AdminController@store');
 Route::post('/datacustomer/store', 'DatacustomerController@store');
 
 
-Route::delete('/delete/{id}', 'AdminController@destroy')->name('delete');
+Route::delete('/deletepost/{id}', 'AdminController@destroy')->name('deletepost');
+
 Route::delete('/delete/{id}', 'DatacustomerController@destroy')->name('delete');
 
 Route::put('/editdata/{id}', 'AdminController@update');

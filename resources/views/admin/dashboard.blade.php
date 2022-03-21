@@ -56,7 +56,7 @@
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <form method="POST" onsubmit="return confirm('Apakah Anda Yakin Akan Menghapus Data?')" action="{{ route('delete',  $post->id) }}" >
+                                        <form method="POST" onsubmit="return confirm('Apakah Anda Yakin Akan Menghapus Data?')" action="{{ route('deletepost',  $post->id) }}" >
                                             
                                             @csrf 
                                             @method('delete') 
