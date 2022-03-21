@@ -23,6 +23,7 @@
                             <th>Nomor Rekening</th>
                             <th>Nama Pelanggan</th>
                             <th>Jumlah Tagihan</th>
+                            <th>Tanggal</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -37,6 +38,9 @@
                             </td>
                             <td>
                                 {{ $post->Jumlah}}
+                            </td>
+                            <td>
+                                {{ $post->tanggal}}
                             </td>
                             
                             <td>

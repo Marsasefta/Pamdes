@@ -23,7 +23,8 @@ class AdminController extends Controller
 		'Rekening' => $request->Rekening,
 		'Nama' => $request->Nama,
 		'Jumlah' => $request->Jumlah,
-		
+		'tanggal' => $request->tanggal,
+	
 	]);
 	if ($table) {
 		return redirect()

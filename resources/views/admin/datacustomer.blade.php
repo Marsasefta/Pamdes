@@ -51,6 +51,7 @@
                             <td>
                                 {{ $customer->rw}}
                             </td>
+                            
                            
                             
                             <td>

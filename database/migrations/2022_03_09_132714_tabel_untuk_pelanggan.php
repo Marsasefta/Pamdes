@@ -20,6 +20,7 @@ class TabelUntukPelanggan extends Migration
             $table->string('Rekening');
             $table->string('Nama');
             $table->string('Jumlah');
+            $table->date('tanggal');
             
         });
     }

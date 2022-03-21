@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pelanggan extends Model
 {
-    protected $fillable = ['Rekening', 'Nama', 'Jumlah'];
+    protected $fillable = ['Rekening', 'Nama', 'Jumlah','tanggal'];
 }
