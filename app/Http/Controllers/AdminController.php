@@ -16,7 +16,7 @@ class AdminController extends Controller
     }
 
     // method untuk insert data ke table
-public function store(Request $request)
+	public function store(Request $request)
 	{
 	// insert data ke table
 	$table = Pelanggan::create([
