@@ -31,25 +31,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @forelse ($posts as $post) --}}
+                        @forelse ($customers as $customer)
                         <tr>
                             <td>
-                                {{-- {{ $post->Rekening}} --}}
+                                {{ $customer->nama}}
                             </td>
                             <td>
-                                {{-- {{ $post->Nama}} --}}
+                                {{ $customer->rekening}}
                             </td>
                             <td>
-                                {{-- {{ $post->Jumlah}} --}}
+                                {{ $customer->alamat}}
                             </td>
                             <td>
-                                {{-- {{ $post->Jumlah}} --}}
+                                {{ $customer->gender}}
                             </td>
                             <td>
-                                {{-- {{ $post->Jumlah}} --}}
+                                {{ $customer->rt}}
                             </td>
                             <td>
-                                {{-- {{ $post->Jumlah}} --}}
+                                {{ $customer->rw}}
                             </td>
                            
                             
@@ -77,13 +77,13 @@
                             </td>
                         </tr>
                         {{-- @include('modal.edit_modal') --}}
-                        {{-- @empty --}}
+                        @empty
                         {{-- <tr class="text-center">
                             <td colspan="6">
                                 Belum Ada Data
                             </td>
                         </tr> --}}
-                        {{-- @endforelse --}}
+                        @endforelse
                     </tbody>
                 </table>
             </div>

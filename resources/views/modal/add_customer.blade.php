@@ -34,11 +34,11 @@
             </div>
             <div class="mb-3">
                 <label for="rt" class="form-label">RT</label>
-                <input type="text" class="form-control" id="rt" name="rt" placeholder="RT">
+                <input type="number" class="form-control" id="rt" name="rt" placeholder="RT">
             </div>
             <div class="mb-3">
                 <label for="rw" class="form-label">RW</label>
-                <input type="text" class="form-control" id="rw" name="rw" placeholder="RW">
+                <input type="number" class="form-control" id="rw" name="rw" placeholder="RW">
             </div>
             </div>
             <div class="modal-footer">

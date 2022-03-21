@@ -8,8 +8,10 @@ class DatacustomerController extends Controller
 {
     public function index()
     {
+        $customers = datacustomer::get();
+        return view('admin.datacustomer', compact('customers'));
 		// $posts = Pelanggan::get();
-        return view('admin.datacustomer');
+        // return view('admin.datacustomer');
     }
 
     public function store(Request $request)
