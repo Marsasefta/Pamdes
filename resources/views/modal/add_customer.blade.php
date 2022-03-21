@@ -10,11 +10,11 @@
         <div class="modal-body">
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama Pelanggan</label>
-                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama">
+                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" required>
             </div>
             <div class="mb-3">
                 <label for="rekening" class="form-label">Nomor Rekening</label>
-                <input type="text" class="form-control" id="rekening" name="rekening" placeholder="Nomor">
+                <input type="text" class="form-control" id="rekening" name="rekening" placeholder="Nomor" required>
             </div>
             <div class="mb-3">
                 <label for="gender" class="form-label">Jenis Kelamin</label>
@@ -30,15 +30,15 @@
             </div>
             <div class="mb-3">
                 <label for="alamat" class="form-label">Alamat</label>
-                <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat">
+                <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat" required>
             </div>
             <div class="mb-3">
                 <label for="rt" class="form-label">RT</label>
-                <input type="number" class="form-control" id="rt" name="rt" placeholder="RT">
+                <input type="number" class="form-control" id="rt" name="rt" placeholder="RT" required>
             </div>
             <div class="mb-3">
                 <label for="rw" class="form-label">RW</label>
-                <input type="number" class="form-control" id="rw" name="rw" placeholder="RW">
+                <input type="number" class="form-control" id="rw" name="rw" placeholder="RW" required>
             </div>
             </div>
             <div class="modal-footer">
