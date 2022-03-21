@@ -21,6 +21,10 @@
                     <label for="Jumlah" class="form-label">Jumlah Yang Dibayar</label>
                     <input type="text" class="form-control" id="Jumlah" name="Jumlah" value="{{ $post->Jumlah }}">
                 </div>
+                <div class="mb-3">
+                    <label for="tanggal" class="form-label">Tanggal</label>
+                    <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{ $post->tanggal }}">
+                </div>
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
