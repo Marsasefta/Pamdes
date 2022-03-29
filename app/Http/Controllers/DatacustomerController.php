@@ -42,6 +42,21 @@ class DatacustomerController extends Controller
 			]);
 	}}
 
+	public function update(Request $request, $id)
+    {
+		
+		$customers = datacustomer::findOrFail($id);
+		$customers->nama = $request->nama;
+		$customers->rekening = $request->rekening;
+		$customers->alamat = $request->alamat;
+		$customers->gender = $request->gender;
+		$customers->rt = $request->rt;
+		$customers->rw = $request->rw;
+
+        $customers->update($request->all());
+        return redirect()->route('datacustomer')->with('success', 'Data Customer Berhasil Diupdate');
+    }
+
     public function destroy($id)
     {
 		DB::table('datacustomers')->where('id', $id)->delete();

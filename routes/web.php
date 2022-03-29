@@ -29,19 +29,26 @@ Auth::routes();
 //     return 'Halaman untuk User';
 // })->middleware('role:user')->name('home');
 
+    Route::get('/dashboard', 'AdminController@index')->name('dashboard');
+    Route::get('/datacustomer', 'DatacustomerController@index')->name('datacustomer');
+    Route::post('/dashboard/store', 'AdminController@store');
+    Route::post('/datacustomer/store', 'DatacustomerController@store');
+    Route::put('/editdata/{id}', 'DatacustomerController@update');
+
+
+    Route::delete('/deletepost/{id}', 'AdminController@destroy')->name('deletepost');
+
+    Route::delete('/delete/{id}', 'DatacustomerController@destroy')->name('delete');
+
+    Route::put('/editdata/{id}', 'AdminController@update');
+
+
+
+
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/dashboard', 'AdminController@index')->name('dashboard');
-Route::get('/datacustomer', 'DatacustomerController@index')->name('datacustomer');
-Route::post('/dashboard/store', 'AdminController@store');
-Route::post('/datacustomer/store', 'DatacustomerController@store');
 
-
-Route::delete('/deletepost/{id}', 'AdminController@destroy')->name('deletepost');
-
-Route::delete('/delete/{id}', 'DatacustomerController@destroy')->name('delete');
-
-Route::put('/editdata/{id}', 'AdminController@update');
 
 Route::resources([
-    'pelanggans' => AdminController::class
+    'pelanggans' => AdminController::class,
+    'datacustomers' => DatacustomerController::class
 ]);

@@ -62,7 +62,7 @@
                                         </a>
                                     </div> --}}
                                     <div class="col">
-                                        <a class="btn btn-warning btn-block" data-bs-toggle="modal" >
+                                        <a class="btn btn-warning btn-block" data-bs-toggle="modal" data-bs-target="#editpelangganModal{{ $customer->id }}">
                                             <i class="far fa-edit"></i>
                                         </a>
                                     </div>
@@ -77,7 +77,7 @@
                                 </div>
                             </td>
                         </tr>
-                        {{-- @include('modal.edit_modal') --}}
+                        @include('modal.editpelanggan_modal')
                         @empty
                         {{-- <tr class="text-center">
                             <td colspan="6">
