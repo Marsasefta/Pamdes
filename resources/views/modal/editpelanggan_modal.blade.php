@@ -20,6 +20,7 @@
                 <div class="mb-3">
                     <label for="gender" class="form-label">Jenis Kelamin</label>
                     <input type="text" class="form-control" id="gender" name="gender" value="{{ $customer->gender }}">
+  
                 </div>
                 <div class="mb-3">
                     <label for="alamat" class="form-label">Alamat</label>

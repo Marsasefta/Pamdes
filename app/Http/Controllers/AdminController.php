@@ -67,4 +67,10 @@ class AdminController extends Controller
 		return redirect('dashboard') ->with('data', 'berhasil dihapus!');
     }
 
+
+	public function rekap()
+    {
+		
+        return view('admin.rekap');
+    }
 }

@@ -66,7 +66,7 @@
                     <span>Pelanggan</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="admin">
+                <a class="nav-link" href="rekap">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Rekap Bulanan</span></a>
             </li>
