@@ -22,7 +22,7 @@
                     
                     <select class="form-select" aria-label="Default select example" name="gender" id="gender"
                         required>
-                        <option selected>-- Pilih --</option>
+                        <option selected disabled>-- Pilih --</option>
                         <option value="pria">Pria</option>
                         <option value="wanita">Wanita</option>
                     </select>
