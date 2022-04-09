@@ -18,41 +18,44 @@
         </div>
         
         <div class="card-body">
-            <div class="row">
+            <form action="{{ route('rekap') }}" method="GET" class="form-group" id="formFilter">
+                {{ csrf_field() }}
+                <div class="row">
               
-                <div class="col-md-4">
-                    {{-- <label>Pilih Bulan</label> --}}
-                    <select style="cursor:pointer;margin-bottom:1.5em;" class="form-control" id="tag_select" name="month">
-                        <option value="0" selected disabled> Pilih Bulan</option>
-                        <option value="01">Januari</option>
-                        <option value="02">Februari</option>
-                        <option value="03">Maret</option>
-                        <option value="04">April</option>
-                        <option value="05">Mei</option>
-                        <option value="06">Juni</option>
-                        <option value="07">Juli</option>
-                        <option value="08">Agustus</option>
-                        <option value="09">September</option>
-                        <option value="10">Oktober</option>
-                        <option value="11">November</option>
-                        <option value="12">Desember</option>
-                    </select>
+                    <div class="col-md-4">
+                        {{-- <label>Pilih Bulan</label> --}}
+                        <select style="cursor:pointer;margin-bottom:1.5em;" class="form-control" id="tag_select" name="month">
+                            <option value="0" selected> Pilih Bulan</option>
+                                <?php for( $m=1; $m<=12; ++$m ) { 
+                                $month_label = date('F', mktime(0, 0, 0, $m, 1));
+                                ?>
+                            <option value="<?php echo $month_label; ?>"><?php echo $month_label; ?></option>
+                                <?php } ?>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        {{-- <label for="">Pilih Tahun</label> --}}
+                        
+                        <select  style="cursor:pointer;" class="form-control" id="tag_select" name="year">
+                        <option value="0" selected > Pilih Tahun</option>
+                        <?php 
+                            $year = date('Y');
+                            $min = $year - 5;
+                            $max = $year;
+                            for( $i=$max; $i>=$min; $i-- ) {
+                            echo '<option value='.$i.'>'.$i.'</option>';
+                        }?> 
+                        </select>
+                        
+                    </div>
+                    
+                    <div class="col">
+                        <label for=""></label>
+                        <button class="btn btn-info">Cari Data</button>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    {{-- <label for="">Pilih Tahun</label> --}}
-                    <select name="" id="" class="form-control">
-                        <option value="0" selected disabled> Pilih Tahun</option>
-                        <option value="">2021</option>
-                        <option value="">2022</option>
-                        <option value="">2023</option>
-                    </select>
-                </div>
-                
-                <div class="col">
-                    <label for=""></label>
-                    <button class="btn btn-info">Cari Data</button>
-                </div>
-            </div>
+            </form>
+            
             
             
             <div class="table-responsive">
@@ -122,3 +125,5 @@
         </div>
     </div>
 @endsection
+
+       
