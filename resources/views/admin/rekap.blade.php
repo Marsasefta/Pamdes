@@ -50,8 +50,8 @@
                     </div>
                     
                     <div class="col">
-                        <label for=""></label>
-                        <button class="btn btn-info">Cari Data</button>
+                       
+                        <button class="btn btn-info" type="submit" >Cari Data</button>
                     </div>
                 </div>
             </form>
@@ -73,52 +73,29 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @forelse ($posts as $post) --}}
+                        @forelse ($rekaps as $rekap)
                         <tr>
                             <td>
-                                {{-- {{ $post->Rekening}} --}}
+                                {{ $rekap->Rekening}}
                             </td>
                             <td>
-                                {{-- {{ $post->Nama}} --}}
+                                {{ $rekap->Nama}}
                             </td>
                             <td>
-                                {{-- {{ $post->Jumlah}} --}}
+                                {{ $rekap->Jumlah}}
                             </td>
                             <td>
-                                {{-- {{ $post->tanggal}} --}}
+                                {{ $rekap->tanggal}}
                             </td>
-                            
-                            {{-- <td>
-                                <div class="row"> --}}
-                                    {{-- <div class="col">
-                                        <a class="btn btn-success btn-block" data-bs-toggle="modal">
-                                            <i class="far fa-eye"></i>
-                                        </a>
-                                    </div> --}}
-                                    {{-- <div class="col">
-                                        <a class="btn btn-warning btn-block" data-bs-toggle="modal" data-bs-target="#editModal{{ $post->id }}">
-                                            <i class="far fa-edit"></i>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <form method="POST" onsubmit="return confirm('Apakah Anda Yakin Akan Menghapus Data?')" action="{{ route('deletepost',  $post->id) }}" >
-                                            
-                                            @csrf 
-                                            @method('delete') 
-                                            <button type="submit"  class="btn btn-danger btn-block"><i class="far fa-trash-alt"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </td> --}}
                         </tr>
                         {{-- @include('modal.edit_modal') --}}
-                        {{-- @empty --}}
-                        {{-- <tr class="text-center">
+                        @empty
+                        {{-- {{-- <tr class="text-center">
                             <td colspan="6">
                                 Belum Ada Data
                             </td>
                         </tr> --}}
-                        {{-- @endforelse --}}
+                        @endforelse
                     </tbody>
                 </table>
             </div>

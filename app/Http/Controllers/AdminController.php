@@ -70,8 +70,8 @@ class AdminController extends Controller
 
 	public function rekap(Request $request)
     {
-		$month = $request->get('month');
-		$rekap = Pelanggan::whereMonth('created_at', '=', $month)->get();
-        return view('admin.rekap');
+
+		$rekaps = Pelanggan::get();
+        return view('admin.rekap', compact('rekaps'));
     }
 }

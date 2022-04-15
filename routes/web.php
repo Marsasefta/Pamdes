@@ -31,6 +31,7 @@ Auth::routes();
 
     Route::get('/dashboard', 'AdminController@index')->name('dashboard');
     Route::get('/rekap', 'AdminController@rekap')->name('rekap');
+    
     Route::get('/datacustomer', 'DatacustomerController@index')->name('datacustomer');
     Route::post('/dashboard/store', 'AdminController@store');
     Route::post('/datacustomer/store', 'DatacustomerController@store');
