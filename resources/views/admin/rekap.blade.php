@@ -23,30 +23,12 @@
                 <div class="row">
               
                     <div class="col-md-4">
-                        {{-- <label>Pilih Bulan</label> --}}
-                        <select style="cursor:pointer;margin-bottom:1.5em;" class="form-control" id="tag_select" name="month">
-                            <option value="0" selected> Pilih Bulan</option>
-                                <?php for( $m=1; $m<=12; ++$m ) { 
-                                $month_label = date('F', mktime(0, 0, 0, $m, 1));
-                                ?>
-                            <option value="<?php echo $month_label; ?>"><?php echo $month_label; ?></option>
-                                <?php } ?>
-                        </select>
+                        {{-- <label>Pilih Bulan</label> --}}                       
+                            <input type="date" class="form-control" name="start_date">
                     </div>
                     <div class="col-md-4">
-                        {{-- <label for="">Pilih Tahun</label> --}}
-                        
-                        <select  style="cursor:pointer;" class="form-control" id="tag_select" name="year">
-                        <option value="0" selected > Pilih Tahun</option>
-                        <?php 
-                            $year = date('Y');
-                            $min = $year - 5;
-                            $max = $year;
-                            for( $i=$max; $i>=$min; $i-- ) {
-                            echo '<option value='.$i.'>'.$i.'</option>';
-                        }?> 
-                        </select>
-                        
+                        {{-- <label for="">Pilih Tahun</label> --}}   
+                        <input type="date" class="form-control" name="end_date">   
                     </div>
                     
                     <div class="col">

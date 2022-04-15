@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Pelanggan;
 use DB;
+use Carbon\Carbon;
 
 
 class AdminController extends Controller
@@ -70,8 +71,16 @@ class AdminController extends Controller
 
 	public function rekap(Request $request)
     {
-
 		$rekaps = Pelanggan::get();
-        return view('admin.rekap', compact('rekaps'));
+
+		if (request()->start_date || request()->end_date) {
+			$start_date = Carbon::parse(request()->start_date)->toDateTimeString();
+			$end_date = Carbon::parse(request()->end_date)->toDateTimeString();
+			$rekaps = Pelanggan::whereBetween('tanggal',[$start_date,$end_date])->get();
+		} else {
+			$rekaps = Pelanggan::latest()->get();
+		}
+		
+        return view('admin.rekap', ['rekaps' => $rekaps]);
     }
 }
