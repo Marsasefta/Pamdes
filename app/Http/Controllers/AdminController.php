@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Pelanggan;
 use DB;
 use Carbon\Carbon;
-
+use PDF;
 
 class AdminController extends Controller
 {
@@ -86,7 +86,12 @@ class AdminController extends Controller
 
 	public function cetak()
 	{
-		$prints = Pelanggan::all();
-        return view('admin.cetakrekap', compact('prints'));
+		$rekaps = Pelanggan::all();
+
+		$pdf = PDF::loadview('admin.cetakrekap',['rekaps'=>$rekaps]);
+    	return $pdf->stream();
+
+
+        // return view('admin.cetakrekap', ['prints' => $prints]);
 	}
 }
