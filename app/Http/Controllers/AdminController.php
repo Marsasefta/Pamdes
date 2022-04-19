@@ -83,4 +83,10 @@ class AdminController extends Controller
 		
         return view('admin.rekap', ['rekaps' => $rekaps]);
     }
+
+	public function cetak()
+	{
+		$prints = Pelanggan::all();
+        return view('admin.cetakrekap', compact('prints'));
+	}
 }
