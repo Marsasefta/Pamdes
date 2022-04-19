@@ -22,17 +22,16 @@
                 {{ csrf_field() }}
                 <div class="row">
                     <h5>Filter Data Bulanan</h5>
-                    <div class="col-md-4">
-                             Mulai Tanggal                 
-                            <input type="date" class="form-control" name="start_date">
+                    <div class="col-md-4 form-inline">
+                                              
+                        Mulai Tanggal <input type="date" class="form-control" name="start_date">
                     </div>
-                    <div class="col-md-4">
-                          Hingga Tanggal
-                        <input type="date" class="form-control" name="end_date">   
+                    <div class="col-md-4 form-inline" >
+                          
+                        Hingga Tanggal <input type="date" class="form-control" name="end_date">   
                     </div>
                     
                     <div class="col">
-                       
                         <button class="btn btn-info" type="submit" >Cari Data</button>
                         <a class="btn btn-success" type="submit" href="{{route('cetakrekap')}}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">

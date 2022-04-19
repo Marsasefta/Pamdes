@@ -1,40 +1,4 @@
-{{-- @extends('layouts.dashboard') --}}
-{{-- @section('title')
-    Barang Export
-@endsection --}}
-{{-- @section('content') --}}
-    {{-- <div class="row">
-        <div class="col">
-            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Tambah Data
-            </button>
-            @include('modal.add_data_modal')
-        </div>
-    </div> --}}
-     
-        {{-- <div class="card-body">
-            <form window method="GET" class="form-group" id="formFilter">
-                {{ csrf_field() }}
-                <div class="row">
-                    <h5>Filter Data Bulanan</h5>
-                    <div class="col-md-4">
-                             Mulai Tanggal                 
-                            <input type="date" class="form-control" name="start_date">
-                    </div>
-                    <div class="col-md-4">
-                          Hingga Tanggal
-                        <input type="date" class="form-control" name="end_date">   
-                    </div>
-                    
-                </div>
-            </form>
-            
-            
-            
-            
-        </div> --}}
-   
-{{-- @endsection --}}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,29 +6,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Admin Pamdes</title>
 </head>
 <body onload="window.print()">
-    <div class="table-responsive" id="tabledownload">
+    <div class="table table-striped" id="tabledownload">
 
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Rekap Tagihan Bulanan Customer</h6>
+        <div>
+            <div>
+                <h3 class="font-bold text-center">Rekap Tagihan Bulanan Customer PAMDES Sendangsari</h3>
                 
             </div>
         </div>
                 
-        <table class="table table-bordered" id="table" width="100%" cellspacing="0">
+        <table class="table table-striped" id="table" width="100%" cellspacing="0">
             
             <thead>
-                
-                <tr>
-                    <th>Nomor Rekening</th>
-                    <th>Nama Pelanggan</th>
-                    <th>Jumlah Tagihan</th>
-                    <th>Tanggal</th>
-                    {{-- <th>Aksi</th> --}}
-                </tr>
+                <thead>
+                    <tr>
+                        <th >Nomor Rekening</th>
+                        <th id="nama_pelanggan" style="max-width: 30px;">Nama Pelanggan</th>
+                        <th id="jumlah_tagihan" style="max-width: 30px;">Jumlah Tagihan</th>
+                        <th id="tanggal" style="max-width: 30px;">Tanggal</th>
+                    </tr>
+                </thead>
+               
             </thead>
             <tbody>
                 @forelse ($prints as $print)
