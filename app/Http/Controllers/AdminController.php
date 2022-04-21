@@ -84,14 +84,29 @@ class AdminController extends Controller
         return view('admin.rekap', ['rekaps' => $rekaps]);
     }
 
-	public function cetak()
+	public function cetak(Request $request)
 	{
-		$rekaps = Pelanggan::all();
-
-		$pdf = PDF::loadview('admin.cetakrekap',['rekaps'=>$rekaps]);
-    	return $pdf->stream();
-
-
-        // return view('admin.cetakrekap', ['prints' => $prints]);
+			$rekaps = pelanggan::all();
+			$start_date = $request->start_date;
+			$end_date =  $request->end_date;
+			$rekaps = DB::table('pelanggans')->where('tanggal')->get();
+			$pdf = PDF::loadview('admin.cetakrekap',['rekaps'=>$rekaps]);
+    		return $pdf->stream();
+		
+			// $pdf = PDF::loadview('admin.cetakrekap',compact('rekaps','date'));
+			// return $pdf->stream();
+			// $rekaps = DB::table('pelanggans')->orderBy('created_at', 'asc')->where('tanggal', [$start_date,$end_date])->take(50)->get();
+			// $pdf = PDF::loadview('admin.cetakrekap',compact('rekaps','date'));
+			// return $pdf->stream();
+			
+		
+			// $date = $request->date;
+			// $rekaps = Pelanggan::all();
+			
+		
+		// $date = $request->date
+		// $rekaps = Pelanggan::
+		
 	}
+	
 }
