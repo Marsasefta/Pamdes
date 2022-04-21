@@ -20,6 +20,7 @@
                 <table class="table table-bordered" id="table" width="100%" cellspacing="0">
                     <thead>
                         <tr>
+                            <th>No</th>
                             <th>Nama</th>
                             <th>Rekening</th>
                             <th>Jenis Kelamin</th>
@@ -31,8 +32,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @php
+                        $no=1
+                        @endphp
                         @forelse ($customers as $customer)
                         <tr>
+                            <td>
+                                {{$no++}}
+                            </td>
                             <td>
                                 {{ $customer->nama}}
                             </td>

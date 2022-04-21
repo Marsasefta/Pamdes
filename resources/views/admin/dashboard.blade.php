@@ -20,6 +20,7 @@
                 <table class="table table-bordered" id="table" width="100%" cellspacing="0">
                     <thead>
                         <tr>
+                            <th>No</th>
                             <th>Nomor Rekening</th>
                             <th>Nama Pelanggan</th>
                             <th>Jumlah Tagihan</th>
@@ -28,8 +29,12 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @php
+                        $no=1
+                        @endphp
                         @forelse ($posts as $post)
                         <tr>
+                            <td>{{$no++}}</td>
                             <td>
                                 {{ $post->Rekening}}
                             </td>
