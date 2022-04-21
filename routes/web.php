@@ -36,7 +36,7 @@ Auth::routes();
     Route::post('/dashboard/store', 'AdminController@store');
     Route::post('/datacustomer/store', 'DatacustomerController@store');
     Route::put('/editdata/{id}', 'DatacustomerController@update');
-    Route::get('/cetakrekap', 'AdminController@cetak')->name('cetakrekap');
+    Route::get('/cetakrekap/{start_date}/{end_date}', 'AdminController@cetak')->name('cetakrekap');
 
     Route::delete('/deletepost/{id}', 'AdminController@destroy')->name('deletepost');
 
