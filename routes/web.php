@@ -14,20 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+    Route::get('/','HomeController@index', function () {
+        return view('home');
+    });
 
-Auth::routes();
+    Auth::routes();
+    
+    Route::get('/login',function () {
+        return view('auth.login');
+    })->name('login');
 
-// Route::get('admin', function() {
-//     return 'Halaman untuk Admin';
-// })->middleware('role:admin')->name('admin.dahsboard');
 
+    Route::get('dashboard', function() {
+        return 'Halaman untuk Admin';
+    })->middleware('role:admin')->name('dashboard');
 
-// Route::get('user', function() {
-//     return 'Halaman untuk User';
-// })->middleware('role:user')->name('home');
 
     Route::get('/dashboard', 'AdminController@index')->name('dashboard');
     Route::get('/rekap', 'AdminController@rekap')->name('rekap');
@@ -47,7 +48,7 @@ Auth::routes();
 
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 
 Route::resources([
