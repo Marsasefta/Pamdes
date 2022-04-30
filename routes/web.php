@@ -18,11 +18,13 @@ use Illuminate\Support\Facades\Route;
         return view('home');
     });
 
-    Auth::routes();
+   
     
     Route::get('/login',function () {
         return view('auth.login');
     })->name('login');
+
+    Auth::routes();
 
 
     Route::get('dashboard', function() {
