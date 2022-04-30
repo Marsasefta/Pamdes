@@ -32,4 +32,9 @@ class HomeController extends Controller
         return view('home', ['datas' => $datas]);
 
     }
+
+    public function detail()
+    {
+        return view('detailuser');
+    }
 }

@@ -47,6 +47,8 @@ use Illuminate\Support\Facades\Route;
 
     Route::put('/editdata/{id}', 'AdminController@update');
 
+    Route::get('/detailuser', 'HomeController@detail');
+
 
 
 
