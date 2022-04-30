@@ -160,9 +160,9 @@
 
                                         <div class="col">
 
-                                            <a class="btn btn-warning btn-block" data-bs-toggle="modal">
+                                            <a class="btn btn-warning btn-block" href="detailuser">
 
-                                                <i class="far fa-edit">Detail</i>
+                                                <i class="far fa-edit" >Detail</i>
 
                                             </a>
 
