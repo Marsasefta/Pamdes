@@ -48,7 +48,7 @@
 
                 <img src="https://4.bp.blogspot.com/-9smovTIsKaU/Wf_kf1SQI_I/AAAAAAAAEgQ/u6lInUv2X3QNeE3Xnga-1drQkPs-u3xNgCLcBGAs/s1600/PDAM.jpg"  style="width:100px;height:90px;" alt="">
 
-                <a class="btn btn-primary bi bi-people"  href="login"> Login Admin</a>
+                <a class="btn btn-primary bi bi-people"  href="login" style="width:150px;height:50px;" Login Admin> Login Admin</a>
 
             </div>
 
@@ -69,8 +69,6 @@
                             <!-- Page heading-->
 
                             <h1 class="mb-6">SELAMAT DATANG DI SISTEM INFORMASI MANAJEMEN PAMDES SENDANGSARI, MINGGIR, SLEMAN</h1>
-
-                            
 
                         </div>
 
@@ -148,7 +146,7 @@
 
                                     <td>
 
-                                        Rp. {{ $data->Jumlah}}
+                                       {{ $data->Jumlah}}
 
                                     </td> 
 
