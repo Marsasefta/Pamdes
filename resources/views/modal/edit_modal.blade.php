@@ -9,21 +9,45 @@
             @csrf
             @method('PUT')
             <div class="modal-body">
-                <div class="mb-3">
+                {{-- <div class="mb-3">
                     <label for="Rekening" class="form-label">Nomor Rekening</label>
                     <input type="text" class="form-control" id="Rekening" name="Rekening" value="{{ $post->Rekening }}">
+                </div> --}}
+                <div class="mb-3">
+                    <label for="Rekening" class="form-label">Nomor Rekening</label>
+                    <input type="number" class="form-control" id="Rekening" name="Rekening" placeholder="No. rekening" value="{{ $post->Rekening }}" required>
                 </div>
                 <div class="mb-3">
                     <label for="Nama" class="form-label">Nama Pelanggan</label>
-                    <input type="text" class="form-control" id="Nama" name="Nama" value="{{ $post->Nama }}">
+                    <input type="text" class="form-control" id="Nama" name="Nama" placeholder="Nama"  value="{{ $post->Nama }}" required>
                 </div>
                 <div class="mb-3">
-                    <label for="Jumlah" class="form-label">Jumlah Yang Dibayar</label>
-                    <input type="text" class="form-control" id="Jumlah" name="Jumlah" value="{{ $post->Jumlah }}">
+                    <label for="Alamat" class="form-label">Alamat</label>
+                    <input type="text" class="form-control" id="Alamat" name="Alamat" placeholder="Alamat" value="{{ $post->Alamat }}">
                 </div>
                 <div class="mb-3">
                     <label for="tanggal" class="form-label">Tanggal</label>
                     <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{ $post->tanggal }}">
+                </div>
+                <div class="mb-3">
+                    <label for="Biaya" class="form-label">Biaya Pemakaian</label>
+                    <input type="text" class="form-control" id="Biaya" name="Biaya" placeholder="Biaya" value="{{ $post->Biaya }}">
+                </div>
+                <div class="mb-3">
+                    <label for="Administrasi" class="form-label">Administrasi</label>
+                    <input type="text" class="form-control" id="Administrasi" name="Administrasi" placeholder="Administrasi" value="{{ $post->Administrasi }}">
+                </div>
+                <div class="mb-3">
+                    <label for="Pemeliharaan" class="form-label">Pemeliharaan</label>
+                    <input type="text" class="form-control" id="Pemeliharaan" name="Pemeliharaan" placeholder="Pemeliharaan"value="{{ $post->Pemeliharaan }}">
+                </div>
+                <div class="mb-3">
+                    <label for="Denda" class="form-label">Denda</label>
+                    <input type="text" class="form-control" id="Denda" name="Denda" placeholder="Denda" value="{{ $post->Denda }}">
+                </div>
+                <div class="mb-3">
+                    <label for="Jumlah" class="form-label">Jumlah Yang Dibayar</label>
+                    <input type="text" class="form-control" id="Jumlah" name="Jumlah" placeholder="Jumlah" value="{{ $post->Jumlah }}">
                 </div>
             </div>
             <div class="modal-footer">

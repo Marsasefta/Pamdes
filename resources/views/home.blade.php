@@ -103,15 +103,16 @@
                                 <tr>
 
                                     <th>No</th>
-
                                     <th>Nomor Rekening</th>
-
                                     <th>Nama Pelanggan</th>
-
-                                    <th>Jumlah Tagihan</th>
-
+                                    <th>Alamat</th>
                                     <th>Tanggal Tagihan</th>
-
+                                    <th>Biaya Pemakaian</th>
+                                    <th>Administrasi</th>
+                                    <th>Pemeliharaan</th>
+                                    <th>Denda</th>
+                                    <th>Jumlah</th>
+                                
 
                                 </tr>
 
@@ -130,32 +131,33 @@
                                 <tr>
 
                                     <td>{{$no++}}</td>
-
                                     <td>
-
                                         {{ $data->Rekening}}
-
                                     </td>
-
                                     <td>
-
                                         {{ $data->Nama}}
-
                                     </td>
-
                                     <td>
-
-                                       {{ $data->Jumlah}}
-
-                                    </td> 
-
+                                        {{ $data->Alamat}}
+                                    </td>
                                     <td>
-
                                         {{ $data->tanggal}}
-
                                     </td>
-                                    
-
+                                    <td>
+                                        {{ $data->Biaya}}
+                                    </td>
+                                    <td>
+                                        {{ $data->Administrasi}}
+                                    </td>
+                                    <td>
+                                        {{ $data->Pemeliharaan}}
+                                    </td>
+                                    <td>
+                                        {{ $data->Denda}}
+                                    </td>
+                                    <td>
+                                        {{ $data->Jumlah}}
+                                    </td>
                                 </tr> 
 
                                 @empty
