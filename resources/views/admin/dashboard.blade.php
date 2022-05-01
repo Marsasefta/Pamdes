@@ -79,7 +79,6 @@
                                 </div>
                             </td>
                         </tr>
-                        @include('modal.detail_modal')
                         @include('modal.edit_modal')
                         @empty
                         {{-- <tr class="text-center">
