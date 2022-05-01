@@ -137,9 +137,8 @@
 				<tr class="details">
 					<td>
                         Nomor Rekening: {{ $post->Rekening }} <br>
-                        
                         Nama Pelanggan: {{ $post->Nama }} <br>
-                        Alamat        :
+                        Alamat        : {{ $post->Alamat }}
                     </td>
 				</tr>
                
@@ -153,23 +152,24 @@
 				<tr class="item">
 					<td>Biaya Pemakaian</td>
 
-					{{-- <td>$300.00</td> --}}
+					<td>{{ $post->Biaya }}</td>
 				</tr>
 
 				<tr class="item">
 					<td>Administrasi</td>
 
-					{{-- <td>$75.00</td> --}}
+					<td>{{ $post->Administrasi }}</td>
 				</tr>
 
 				<tr class="item">
 					<td>Pemeliharaan</td>
 
-					{{-- <td>$10.00</td> --}}
+					<td>{{ $post->Pemeliharaan }}</td>
 				</tr>
 
                 <tr class="item">
 					<td>Denda</td>
+                    <td>{{ $post->Denda }}</td>
 				</tr>
                 <tr class="item last">
 					<td>Tagihan Air</td>
@@ -177,9 +177,8 @@
 				</tr>
 
 				<tr class="total">
-					<td></td>
-
-					<td>{{ $post->Jumlah }}</td>
+                    <td></td>
+					<td>Total :  {{ $post->Jumlah }}</td>
 				</tr>
 			</table>
 		</div>

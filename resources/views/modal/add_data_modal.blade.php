@@ -17,12 +17,32 @@
                 <input type="text" class="form-control" id="Nama" name="Nama" placeholder="Nama" required>
             </div>
             <div class="mb-3">
-                <label for="Jumlah" class="form-label">Jumlah Yang Dibayar</label>
-                <input type="text" class="form-control" id="Jumlah" name="Jumlah" placeholder="Jumlah" >
+                <label for="Alamat" class="form-label">Alamat</label>
+                <input type="text" class="form-control" id="Alamat" name="Alamat" placeholder="Alamat" >
             </div>
             <div class="mb-3">
                 <label for="tanggal" class="form-label">Tanggal</label>
                 <input type="date" class="form-control" id="tanggal" name="tanggal" >
+            </div>
+            <div class="mb-3">
+                <label for="Biaya" class="form-label">Biaya Pemakaian</label>
+                <input type="text" class="form-control" id="Biaya" name="Biaya" placeholder="Biaya" >
+            </div>
+            <div class="mb-3">
+                <label for="Administrasi" class="form-label">Administrasi</label>
+                <input type="text" class="form-control" id="Administrasi" name="Administrasi" placeholder="Administrasi" >
+            </div>
+            <div class="mb-3">
+                <label for="Pemeliharaan" class="form-label">Pemeliharaan</label>
+                <input type="text" class="form-control" id="Pemeliharaan" name="Pemeliharaan" placeholder="Pemeliharaan" >
+            </div>
+            <div class="mb-3">
+                <label for="Denda" class="form-label">Denda</label>
+                <input type="text" class="form-control" id="Denda" name="Denda" placeholder="Denda" >
+            </div>
+            <div class="mb-3">
+                <label for="Jumlah" class="form-label">Jumlah Yang Dibayar</label>
+                <input type="text" class="form-control" id="Jumlah" name="Jumlah" placeholder="Jumlah" >
             </div>
             </div>
             <div class="modal-footer">
@@ -38,6 +58,102 @@
     Jumlah.addEventListener('keyup', function(e)
     {
         Jumlah.value = formatRupiah(this.value, 'Rp. ');
+    });
+    
+    /* Fungsi */
+    function formatRupiah(angka, prefix)
+    {
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+            split    = number_string.split(','),
+            sisa     = split[0].length % 3,
+            rupiah     = split[0].substr(0, sisa),
+            ribuan     = split[0].substr(sisa).match(/\d{3}/gi);
+            
+        if (ribuan) {
+            separator = sisa ? '.' : '';
+            rupiah += separator + ribuan.join('.');
+        }
+        
+        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+        return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+    }
+
+    var Biaya = document.getElementById('Biaya');
+    Biaya.addEventListener('keyup', function(e)
+    {
+        Biaya.value = formatRupiah(this.value, 'Rp. ');
+    });
+    
+    /* Fungsi */
+    function formatRupiah(angka, prefix)
+    {
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+            split    = number_string.split(','),
+            sisa     = split[0].length % 3,
+            rupiah     = split[0].substr(0, sisa),
+            ribuan     = split[0].substr(sisa).match(/\d{3}/gi);
+            
+        if (ribuan) {
+            separator = sisa ? '.' : '';
+            rupiah += separator + ribuan.join('.');
+        }
+        
+        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+        return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+    }
+
+    var Denda = document.getElementById('Denda');
+    Denda.addEventListener('keyup', function(e)
+    {
+        Denda.value = formatRupiah(this.value, 'Rp. ');
+    });
+    
+    /* Fungsi */
+    function formatRupiah(angka, prefix)
+    {
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+            split    = number_string.split(','),
+            sisa     = split[0].length % 3,
+            rupiah     = split[0].substr(0, sisa),
+            ribuan     = split[0].substr(sisa).match(/\d{3}/gi);
+            
+        if (ribuan) {
+            separator = sisa ? '.' : '';
+            rupiah += separator + ribuan.join('.');
+        }
+        
+        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+        return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+    }
+
+    var Administrasi = document.getElementById('Administrasi');
+    Administrasi.addEventListener('keyup', function(e)
+    {
+        Administrasi.value = formatRupiah(this.value, 'Rp. ');
+    });
+    
+    /* Fungsi */
+    function formatRupiah(angka, prefix)
+    {
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+            split    = number_string.split(','),
+            sisa     = split[0].length % 3,
+            rupiah     = split[0].substr(0, sisa),
+            ribuan     = split[0].substr(sisa).match(/\d{3}/gi);
+            
+        if (ribuan) {
+            separator = sisa ? '.' : '';
+            rupiah += separator + ribuan.join('.');
+        }
+        
+        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+        return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+    }
+
+    var Pemeliharaan = document.getElementById('Pemeliharaan');
+    Pemeliharaan.addEventListener('keyup', function(e)
+    {
+        Pemeliharaan.value = formatRupiah(this.value, 'Rp. ');
     });
     
     /* Fungsi */

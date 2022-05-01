@@ -23,8 +23,13 @@
                             <th>No</th>
                             <th>Nomor Rekening</th>
                             <th>Nama Pelanggan</th>
-                            <th>Jumlah Tagihan</th>
+                            <th>Alamat</th>
                             <th>Tanggal</th>
+                            <th>Biaya Pemakaian</th>
+                            <th>Administrasi</th>
+                            <th>Pemeliharaan</th>
+                            <th>Denda</th>
+                            <th>Jumlah</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -42,12 +47,26 @@
                                 {{ $post->Nama}}
                             </td>
                             <td>
-                                {{ $post->Jumlah}}
+                                {{ $post->Alamat}}
                             </td>
                             <td>
                                 {{ $post->tanggal}}
                             </td>
-                            
+                            <td>
+                                {{ $post->Biaya}}
+                            </td>
+                            <td>
+                                {{ $post->Administrasi}}
+                            </td>
+                            <td>
+                                {{ $post->Pemeliharaan}}
+                            </td>
+                            <td>
+                                {{ $post->Denda}}
+                            </td>
+                            <td>
+                                {{ $post->Jumlah}}
+                            </td>
                             <td>
                                 <div class="row">
                                     {{-- <div class="col">

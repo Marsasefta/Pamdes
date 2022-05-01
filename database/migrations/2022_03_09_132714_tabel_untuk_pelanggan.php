@@ -19,9 +19,13 @@ class TabelUntukPelanggan extends Migration
             $table->timestamps();
             $table->integer('Rekening');
             $table->string('Nama');
-            $table->string('Jumlah');
+            $table->string('Alamat');
             $table->date('tanggal');
-            
+            $table->string('Biaya');
+            $table->string('Administrasi');
+            $table->string('Pemeliharaan');
+            $table->string('Denda');
+            $table->string('Jumlah');
         });
     }
 

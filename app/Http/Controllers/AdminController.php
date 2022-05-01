@@ -23,8 +23,13 @@ class AdminController extends Controller
 	$table = Pelanggan::create([
 		'Rekening' => $request->Rekening,
 		'Nama' => $request->Nama,
-		'Jumlah' => $request->Jumlah,
+		'Alamat'=>$request->Alamat,
 		'tanggal' => $request->tanggal,
+		'Biaya' => $request->Biaya,
+		'Administrasi' => $request->Administrasi,
+		'Pemeliharaan' => $request->Pemeliharaan,
+		'Denda' => $request->Denda,
+		'Jumlah' => $request->Jumlah,
 	
 	]);
 	if ($table) {
