@@ -18,19 +18,48 @@
 	<table class='table table-bordered' method="GET">
 		<thead>
 			<tr>
-                <th>Nomor Rekening</th>
-                <th>Nama Pelanggan</th>
-                <th>Jumlah Tagihan</th>
-                <th>Tanggal Tagihan</th>
+				{{-- <th>No</th> --}}
+				<th>Nomor Rekening</th>
+				<th>Nama Pelanggan</th>
+				<th>Alamat</th>
+				<th>Tanggal</th>
+				<th>Biaya Pemakaian</th>
+				<th>Administrasi</th>
+				<th>Pemeliharaan</th>
+				<th>Denda</th>
+				<th>Jumlah</th>
 			</tr>
 		</thead>
 		<tbody>
 			@forelse($rekaps as $rekap)
 			<tr>
-				<td>{{$rekap->Rekening}}</td>
-				<td>{{$rekap->Nama}}</td>
-				<td>{{$rekap->Jumlah}}</td>
-				<td>{{$rekap->tanggal}}</td>
+				<td>
+					{{ $rekap->Rekening}}
+				</td>
+				<td>
+					{{ $rekap->Nama}}
+				</td>
+				<td>
+					{{ $rekap->Alamat}}
+				</td>
+				<td>
+					{{ $rekap->tanggal}}
+				</td>
+				<td>
+					{{ $rekap->Biaya}}
+				</td>
+				<td>
+					{{ $rekap->Administrasi}}
+				</td>
+				<td>
+					{{ $rekap->Pemeliharaan}}
+				</td>
+				<td>
+					{{ $rekap->Denda}}
+				</td>
+				<td>
+					{{ $rekap->Jumlah}}
+				</td>
 			</tr>
             @empty
 			@endforelse
