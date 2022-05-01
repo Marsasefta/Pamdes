@@ -91,5 +91,10 @@ class AdminController extends Controller
     	return $pdf->stream();
 	}
 
+	public function detail($id)
+    {
+		$post = Pelanggan::findOrFail($id);
+        return view('detailuser', ['post' => $post]);
+    }
 	
 }

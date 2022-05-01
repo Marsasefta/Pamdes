@@ -112,7 +112,6 @@
 
                                     <th>Tanggal Tagihan</th>
 
-                                    <th>Aksi</th>
 
                                 </tr>
 
@@ -155,21 +154,6 @@
                                         {{ $data->tanggal}}
 
                                     </td>
-
-                                    <td>
-
-                                        <div class="col">
-
-                                            <a class="btn btn-warning btn-block" href="detailuser">
-
-                                                <i class="far fa-edit" >Detail</i>
-
-                                            </a>
-
-                                        </div>
-
-                                    </td>
-
                                     
 
                                 </tr> 
@@ -204,7 +188,7 @@
 
                 <div class="text-center">
 
-                  <h5 class="text-uppercase">tENTANG KAMI</h5>
+                  <h5 class="text-uppercase">TENTANG KAMI</h5>
 
           
 

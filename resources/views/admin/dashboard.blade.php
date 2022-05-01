@@ -55,6 +55,15 @@
                                             <i class="far fa-eye"></i>
                                         </a>
                                     </div> --}}
+                                
+                                    <div class="col">
+                                        <form action="{{ route('detailuser',  $post->id) }}">
+                                        
+                                            <button type="submit" class="btn btn-success" style="width: 50px" >
+                                                <i class="fa fa-print"></i>
+                                            </button>
+                                        </form>
+                                    </div>
                                     <div class="col">
                                         <a class="btn btn-warning btn-block" data-bs-toggle="modal" data-bs-target="#editModal{{ $post->id }}">
                                             <i class="far fa-edit"></i>
@@ -62,7 +71,6 @@
                                     </div>
                                     <div class="col">
                                         <form method="POST" onsubmit="return confirm('Apakah Anda Yakin Akan Menghapus Data?')" action="{{ route('deletepost',  $post->id) }}" >
-                                            
                                             @csrf 
                                             @method('delete') 
                                             <button type="submit"  class="btn btn-danger btn-block"><i class="far fa-trash-alt"></i></button>
@@ -71,6 +79,7 @@
                                 </div>
                             </td>
                         </tr>
+                        @include('modal.detail_modal')
                         @include('modal.edit_modal')
                         @empty
                         {{-- <tr class="text-center">
