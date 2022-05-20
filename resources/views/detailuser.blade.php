@@ -171,14 +171,11 @@
 					<td>Denda</td>
                     <td>{{ $post->Denda }}</td>
 				</tr>
-                <tr class="item last">
-					<td>Tagihan Air</td>
-                    <td>{{ $post->Jumlah }}</td>
-				</tr>
+            
 
 				<tr class="total">
                     <td></td>
-					<td>Total :  {{ $post->Jumlah }}</td>
+					<td>Total Tagihan:  {{ $post->Jumlah }}</td>
 				</tr>
 			</table>
 		</div>

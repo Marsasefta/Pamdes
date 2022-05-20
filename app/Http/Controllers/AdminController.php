@@ -101,5 +101,11 @@ class AdminController extends Controller
 		$post = Pelanggan::findOrFail($id);
         return view('detailuser', ['post' => $post]);
     }
+
+	public function dataadmin()
+    {
+		// $posts = Pelanggan::get();
+        return view('admin.dataadmin');
+    }
 	
 }

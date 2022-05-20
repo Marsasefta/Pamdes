@@ -26,19 +26,19 @@
             </div>
             <div class="mb-3">
                 <label for="Biaya" class="form-label">Biaya Pemakaian</label>
-                <input type="text" class="form-control" id="Biaya" name="Biaya" placeholder="Biaya" >
+                <input type="text" class="form-control" id="Biaya" name="Biaya" placeholder="Biaya" onchange="sum()" >
             </div>
             <div class="mb-3">
                 <label for="Administrasi" class="form-label">Administrasi</label>
-                <input type="text" class="form-control" id="Administrasi" name="Administrasi" placeholder="Administrasi" >
+                <input type="text" class="form-control" id="Administrasi" name="Administrasi" placeholder="Administrasi" onchange="sum()" >
             </div>
             <div class="mb-3">
                 <label for="Pemeliharaan" class="form-label">Pemeliharaan</label>
-                <input type="text" class="form-control" id="Pemeliharaan" name="Pemeliharaan" placeholder="Pemeliharaan" >
+                <input type="text" class="form-control" id="Pemeliharaan" name="Pemeliharaan" placeholder="Pemeliharaan" onchange="sum()">
             </div>
             <div class="mb-3">
                 <label for="Denda" class="form-label">Denda</label>
-                <input type="text" class="form-control" id="Denda" name="Denda" placeholder="Denda" >
+                <input type="text" class="form-control" id="Denda" name="Denda" placeholder="Denda" onchange="sum()" >
             </div>
             <div class="mb-3">
                 <label for="Jumlah" class="form-label">Jumlah Yang Dibayar</label>
@@ -54,6 +54,20 @@
     </div>
 </div>
 <script>
+    
+    function sum(){
+        var Biaya = document.getElementById('Biaya').value;
+        var Administrasi = document.getElementById('Administrasi').value;
+        var Pemeliharaan = document.getElementById('Pemeliharaan').value;
+        var Denda = document.getElementById('Denda').value;
+
+        var total = parseFloat(Biaya) + parseFloat(Administrasi) + parseFloat(Pemeliharaan) + parseFloat(Denda);
+        if (!isNaN(total)) {
+         document.getElementById('Jumlah').value = total;
+      }
+    }
+
+
     var Jumlah = document.getElementById('Jumlah');
     Jumlah.addEventListener('keyup', function(e)
     {
@@ -173,5 +187,8 @@
         rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
         return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
     }
+
+
+
 </script>
 

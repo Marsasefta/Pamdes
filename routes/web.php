@@ -34,7 +34,7 @@ use Illuminate\Support\Facades\Route;
 
     Route::get('/dashboard', 'AdminController@index')->name('dashboard');
     Route::get('/rekap', 'AdminController@rekap')->name('rekap');
-    
+    Route::get('/dataadmin', 'AdminController@dataadmin');
     Route::get('/datacustomer', 'DatacustomerController@index')->name('datacustomer');
     Route::post('/dashboard/store', 'AdminController@store');
     Route::post('/datacustomer/store', 'DatacustomerController@store');
@@ -48,6 +48,7 @@ use Illuminate\Support\Facades\Route;
     Route::put('/editdata/{id}', 'AdminController@update');
 
     Route::get('/detailuser/{id}', 'AdminController@detail')->name('detailuser');
+    
 
 
 
