@@ -1,13 +1,10 @@
 @extends('layouts.dashboard')
-{{-- @section('title')
-    Barang Export
-@endsection --}}
 @section('content')
     <div class="row">
         <div class="col">
-            <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-info mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <i class="fas fa-users" aria-hidden="true"></i>
-                Tambah Admin pengguna
+                Tambah Pengguna
             </button>
             @include('modal.add_admin')
         </div>
@@ -30,9 +27,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @php
+                        {{-- @php
                         $no=1
-                        @endphp
+                        @endphp --}}
                         {{-- @forelse ($customers as $customer) --}}
                         <tr>
                             <td>
@@ -50,9 +47,6 @@
                             <td>
                                 {{-- {{ $customer->gender}} --}}
                             </td>
-                           
-                           
-                            
                             <td>
                                 <div class="row">
                                     {{-- <div class="col">
@@ -66,7 +60,7 @@
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <form method="POST" onsubmit="return confirm('Apakah Anda Yakin Akan Menghapus Data?')">
+                                        <form method="POST" onsubmit="return confirm('Apakah Anda Yakin Akan Menghapus Data?')" >
                                             
                                             @csrf 
                                             @method('delete') 
