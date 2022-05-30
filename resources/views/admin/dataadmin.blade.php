@@ -49,19 +49,13 @@
                             </td>
                             <td>
                                 <div class="row">
-                                    {{-- <div class="col">
-                                        <a class="btn btn-success btn-block" data-bs-toggle="modal">
-                                            <i class="far fa-eye"></i>
-                                        </a>
-                                    </div> --}}
                                     <div class="col">
-                                        <a class="btn btn-warning btn-block" data-bs-toggle="modal">
+                                        <a class="btn btn-warning btn-block" data-bs-toggle="modal" data-bs-target="#editadminModal{{ $admin->id }}">
                                             <i class="far fa-edit"></i>
                                         </a>
                                     </div>
                                     <div class="col">
                                         <form method="POST"  action="{{ route('deleteadmin',  $admin->id) }}" onsubmit="return confirm('Apakah Anda Yakin Akan Menghapus Data?')">
-                                            
                                             @csrf 
                                             @method('delete') 
                                             <button type="submit"  class="btn btn-danger btn-block"><i class="far fa-trash-alt"></i></button>
@@ -70,7 +64,7 @@
                                 </div>
                             </td>
                         </tr>
-                        {{-- @include('modal.editpelanggan_modal') --}}
+                        @include('modal.editadmin')
                         @empty
                         @endforelse
                     </tbody>

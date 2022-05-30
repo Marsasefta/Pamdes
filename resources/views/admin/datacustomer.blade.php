@@ -58,16 +58,8 @@
                             <td>
                                 {{ $customer->rw}}
                             </td>
-                            
-                           
-                            
                             <td>
                                 <div class="row">
-                                    {{-- <div class="col">
-                                        <a class="btn btn-success btn-block" data-bs-toggle="modal">
-                                            <i class="far fa-eye"></i>
-                                        </a>
-                                    </div> --}}
                                     <div class="col">
                                         <a class="btn btn-warning btn-block" data-bs-toggle="modal" data-bs-target="#editpelangganModal{{ $customer->id }}">
                                             <i class="far fa-edit"></i>

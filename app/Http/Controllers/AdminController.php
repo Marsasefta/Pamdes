@@ -127,6 +127,6 @@ class AdminController extends Controller
 		return redirect('dataadmin') ->with('data', 'berhasil dihapus!');
     }
 
-
+	
 	
 }

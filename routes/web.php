@@ -45,22 +45,20 @@ use App\Http\Controllers\RegisterController;
     
 
     Route::delete('/deletepost/{id}', 'AdminController@destroy')->name('deletepost');
+
     Route::delete('/deleteadmin/{id}', 'AdminController@delete')->name('deleteadmin');
+
     Route::delete('/delete/{id}', 'DatacustomerController@destroy')->name('delete');
     
 
     Route::put('/editdata/{id}', 'AdminController@update');
+    Route::put('/editadmin/{id}', 'HomeController@update');
 
     Route::get('/detailuser/{id}', 'AdminController@detail')->name('detailuser');
     
 
-
-
-
-
-
-
 Route::resources([
     'pelanggans' => AdminController::class,
-    'datacustomers' => DatacustomerController::class
+    'datacustomers' => DatacustomerController::class,
+    'users' => HomeController::class
 ]);

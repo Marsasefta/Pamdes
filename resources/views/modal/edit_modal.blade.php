@@ -9,10 +9,6 @@
             @csrf
             @method('PUT')
             <div class="modal-body">
-                {{-- <div class="mb-3">
-                    <label for="Rekening" class="form-label">Nomor Rekening</label>
-                    <input type="text" class="form-control" id="Rekening" name="Rekening" value="{{ $post->Rekening }}">
-                </div> --}}
                 <div class="mb-3">
                     <label for="Rekening" class="form-label">Nomor Rekening</label>
                     <input type="number" class="form-control" id="Rekening" name="Rekening" placeholder="No. rekening" value="{{ $post->Rekening }}" required>
