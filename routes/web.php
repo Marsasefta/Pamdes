@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 
 
 /*
@@ -40,10 +41,13 @@ use Illuminate\Support\Facades\Route;
     Route::post('/datacustomer/store', 'DatacustomerController@store');
     Route::put('/editdata/{id}', 'DatacustomerController@update');
     Route::get('/cetakrekap/{start_date}/{end_date}', 'AdminController@cetak')->name('cetakrekap');
+    Route::post('/adduser', 'AdminController@adduser');
+    
 
     Route::delete('/deletepost/{id}', 'AdminController@destroy')->name('deletepost');
-
+    Route::delete('/deleteadmin/{id}', 'AdminController@delete')->name('deleteadmin');
     Route::delete('/delete/{id}', 'DatacustomerController@destroy')->name('delete');
+    
 
     Route::put('/editdata/{id}', 'AdminController@update');
 

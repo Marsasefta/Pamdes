@@ -7,6 +7,7 @@ use App\Pelanggan;
 use DB;
 use Carbon\Carbon;
 use PDF;
+use App\User;
 
 class AdminController extends Controller
 {
@@ -104,8 +105,28 @@ class AdminController extends Controller
 
 	public function dataadmin()
     {
-		// $posts = Pelanggan::get();
-        return view('admin.dataadmin');
+		$admins = User::get();
+		return view('admin.dataadmin', compact('admins'));
     }
+
+	public function adduser(Request $request)
+    {
+        $admins = User::create([
+            'name' => $request->nama,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+			'confirmpass'=> $request->confirmpass,
+            'role' => $request->role,
+        ]);
+		return redirect()->back();
+    }
+
+	public function delete($id)
+    {
+		DB::table('users')->where('id', $id)->delete();
+		return redirect('dataadmin') ->with('data', 'berhasil dihapus!');
+    }
+
+
 	
 }

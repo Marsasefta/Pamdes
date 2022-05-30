@@ -27,25 +27,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @php
+                        @php
                         $no=1
-                        @endphp --}}
-                        {{-- @forelse ($customers as $customer) --}}
+                        @endphp
+                        @forelse ($admins as $admin)
                         <tr>
                             <td>
-                                {{-- {{$no++}} --}}
+                                {{$no++}}
                             </td>
                             <td>
-                                {{-- {{ $customer->nama}} --}}
+                                {{ $admin->name}}
                             </td>
                             <td>
-                                {{-- {{ $customer->rekening}} --}}
+                                {{ $admin->email}}
                             </td>
                             <td>
-                                {{-- {{ $customer->alamat}} --}}
+                                {{ $admin->confirmpass}}
                             </td>
                             <td>
-                                {{-- {{ $customer->gender}} --}}
+                                {{ $admin->role}}
                             </td>
                             <td>
                                 <div class="row">
@@ -60,7 +60,7 @@
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <form method="POST" onsubmit="return confirm('Apakah Anda Yakin Akan Menghapus Data?')" >
+                                        <form method="POST"  action="{{ route('deleteadmin',  $admin->id) }}" onsubmit="return confirm('Apakah Anda Yakin Akan Menghapus Data?')">
                                             
                                             @csrf 
                                             @method('delete') 
@@ -71,8 +71,8 @@
                             </td>
                         </tr>
                         {{-- @include('modal.editpelanggan_modal') --}}
-                        {{-- @empty
-                        @endforelse --}}
+                        @empty
+                        @endforelse
                     </tbody>
                 </table>
             </div>

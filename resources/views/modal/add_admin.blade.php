@@ -2,10 +2,10 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Detail Pengguna</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Detail Admin Pengguna</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="/datacustomer/store" method="post" enctype="multipart/form-data">
+            <form action="adduser" method="post" enctype="multipart/form-data">
             @csrf
             <div class="modal-body">
                 <div class="mb-3">
@@ -21,15 +21,18 @@
                     <input type="text" class="form-control" id="password" name="password" placeholder="Password" required>
                 </div>
                 <div class="mb-3">
+                    <label for="confirmpass" class="form-label"> Confirm Password</label>
+                    <input type="text" class="form-control" id="confirmpass" name="confirmpass" placeholder="Confirm Password" required>
+                </div>
+                <div class="mb-3">
                     <label for="gender" class="form-label">Role</label>
                     <div class="input-group">
-                        
-                        <select class="form-select" aria-label="Default select example" name="gender" id="gender"
+                        <select class="form-select" aria-label="Default select example" name="role" id="role"
                             required>
                             <option selected disabled>-- Pilih --</option>
-                            <option value="kepala">Kepala PDAM</option>
-                            <option value="staff">Staff PDAM</option>
-                            <option value="lainnya">lainnya</option>
+                            <option value="Kepala PDAM">Kepala PDAM</option>
+                            <option value="Staff PDAM">Staff PDAM</option>
+                            <option value="Lainnya">lainnya</option>
                         </select>
                     </div>
                 </div>
