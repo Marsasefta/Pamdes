@@ -18,11 +18,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="text" class="form-control" id="password" name="password" placeholder="Password" required>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                 </div>
                 <div class="mb-3">
                     <label for="confirmpass" class="form-label"> Confirm Password</label>
-                    <input type="text" class="form-control" id="confirmpass" name="confirmpass" placeholder="Confirm Password" required>
+                    <input type="password" class="form-control" id="confirmpass" name="confirmpass" placeholder="Confirm Password" required>
                 </div>
                 <div class="mb-3">
                     <label for="gender" class="form-label">Role</label>
@@ -30,8 +30,8 @@
                         <select class="form-select" aria-label="Default select example" name="role" id="role"
                             required>
                             <option selected disabled>-- Pilih --</option>
-                            <option value="Kepala PDAM">Kepala PDAM</option>
-                            <option value="Staff PDAM">Staff PDAM</option>
+                            <option value="Kepala">Kepala PDAM</option>
+                            <option value="Staff">Staff PDAM</option>
                             <option value="Lainnya">lainnya</option>
                         </select>
                     </div>

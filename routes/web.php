@@ -53,7 +53,6 @@ use App\Http\Controllers\RegisterController;
 
     Route::put('/editdata/{id}', 'AdminController@update');
     Route::put('/editadmin/{id}', 'HomeController@update');
-
     Route::get('/detailuser/{id}', 'AdminController@detail')->name('detailuser');
     
 
@@ -62,3 +61,7 @@ Route::resources([
     'datacustomers' => DatacustomerController::class,
     'users' => HomeController::class
 ]);
+
+    // Route::group(['middleware' => ['auth','ceklevel:admin,Kepala,Staff']], function(){
+        
+    // });
