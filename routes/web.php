@@ -65,3 +65,5 @@ Route::resources([
     // Route::group(['middleware' => ['auth','ceklevel:admin,Kepala,Staff']], function(){
         
     // });
+
+    Route::get('/rules', 'HomeController@rules');

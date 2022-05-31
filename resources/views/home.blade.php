@@ -19,9 +19,9 @@
         <meta name="author" content="" />
 
         <title>SIPAMDES SENDANGSARI</title>
-
-        <!-- Favicon-->
-
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
         <!-- Bootstrap icons-->
@@ -41,27 +41,28 @@
     <body>
 
         <!-- Navigation-->
-
-        <nav class="navbar navbar-light bg-light static-top">
-
-            <div class="container">
-
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
                 <img src="https://4.bp.blogspot.com/-9smovTIsKaU/Wf_kf1SQI_I/AAAAAAAAEgQ/u6lInUv2X3QNeE3Xnga-1drQkPs-u3xNgCLcBGAs/s1600/PDAM.jpg"  style="width:100px;height:90px;" alt="">
-
-                <a class="btn btn-primary bi bi-people"  href="login" style="width:150px;height:50px;" Login Admin> Login Admin</a>
-
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#content">Cek Tagihan</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#rules">Kebijakan</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#about">Tentang Kami</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="login">Login</a></li>
+                    </ul>
+                </div>
             </div>
-
         </nav>
 
         <!-- Masthead-->
 
         <header class="masthead">
-
+            
             <div class="container position-relative">
 
                 <div class="row justify-content-center">
-
+                    
                     <div class="col-xl-8">
 
                         <div class="text-center text-white">
@@ -176,15 +177,44 @@
 
         </section>
 
-        <footer class="bg-light text-center text-lg-start">
+        <section class="features-icons bg-light text-center" id="rules"> 
+            <h2>Kebijakan</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi bi-calendar-event m-auto text-primary"></i></div>
+                            <h3>Maksimal Pembayaran</h3>
+                            <p class="lead mb-0">Harap bayar tagihan anda tepat waktu sebelum tanggal 20 disetiap bulannya!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi bi-cash-coin m-auto text-primary"></i></div>
+                            <h3>Denda</h3>
+                            <p class="lead mb-0">Pembayaran yang melebihi tanggal 20 akan mendapatkan denda!</p>
+                        </div>
+                    </div>
+                    {{-- <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
+                            <h3>Easy to Use</h3>
+                            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                        </div>
+                    </div> --}}
+                </div>
+            </div>
+        </section>
+
+        {{-- <section class="bg-light text-center text-lg-start" id="about" >
 
             <!-- Grid container -->
 
-            <div class="container p-4">
+            <div class="container p-4" style="background-color: rgba(0, 0, 0, 0.2);">
 
               <!--Grid row-->
 
-              <div class="row">
+              <div class="row" >
 
                 <!--Grid column-->
 
@@ -219,41 +249,53 @@
                   </p>
 
                 </div>
-
-                <!--Grid column-->
-
-          
-
-                <!--Grid column-->
-
-                
-
-                <!--Grid column-->
-
               </div>
-
-              <!--Grid row-->
-
             </div>
-
-            <!-- Grid container -->
-
-          
-
-            <!-- Copyright -->
-
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-
-              © 2020 Copyright: PDAM SENDANGSARI, MINGGIR, SLEMAN
-
-              
-
+              PDAM SENDANGSARI, MINGGIR, SLEMAN  
             </div>
-
-            <!-- Copyright -->
-
-          </footer>
-
+        </section> --}}
+        <section class="features-icons bg-secondary text-center" id="about">
+            <h2>Tentang Kami</h2>
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Alamat</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Balai Desa Sendangsari , Kecamatan Minggir , Kabupaten Sleman</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Pamdessendangsari@gmail.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Telephone</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">08123456678</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <footer class="footer bg-secondary small text-center text-white-50">
+            <div class="container px-4 px-lg-5"> &copy;2022 Sistem Informasi PDAM Desa Sendangsari, Kecamatan Minggir</div>
+        </footer>
         <!-- Footer-->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -264,10 +306,10 @@
 
         <script src="{{ asset('template/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
-
-
-        <!-- Custom scripts for all pages-->
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+     
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
         <script src="{{ asset('template/js/sb-admin-2.min.js') }}"></script>
 
     

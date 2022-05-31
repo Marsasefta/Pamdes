@@ -39,6 +39,12 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
+    public function rules()
+    {
+       
+        return view('rules');
+
+    }
 
     
 }
