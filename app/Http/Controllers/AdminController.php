@@ -7,23 +7,29 @@ use App\Pelanggan;
 use DB;
 use Carbon\Carbon;
 use PDF;
+use Auth;
 use App\User;
+use App\users;
 
 class AdminController extends Controller
 {
-    public function index()
+    public function index(Pelanggan $posts, User $users)
     {
-		$posts = Pelanggan::get();
-        return view('admin.dashboard', compact('posts'));
+		// ->where('iduser', Auth::user()->id)->get()
+		$posts = Pelanggan::with('user')->get();
+		$users = User::all(); 
+        return view('admin.dashboard', compact('posts','users'));
+		
     }
-
+	
     // method untuk insert data ke table
 	public function store(Request $request)
 	{
 	// insert data ke table
+
 	$table = Pelanggan::create([
 		'Rekening' => $request->Rekening,
-		'Nama' => $request->Nama,
+		'iduser' =>$request->iduser,
 		'Alamat'=>$request->Alamat,
 		'tanggal' => $request->tanggal,
 		'Biaya' => $request->Biaya,

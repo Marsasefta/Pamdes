@@ -32,7 +32,8 @@
                             <option selected disabled>-- Pilih --</option>
                             <option value="Kepala">Kepala PDAM</option>
                             <option value="Staff">Staff PDAM</option>
-                            <option value="Lainnya">lainnya</option>
+                            <option value="Pelanggan">Pelanggan</option>
+                            {{-- <option value="Lainnya">lainnya</option> --}}
                         </select>
                     </div>
                 </div>

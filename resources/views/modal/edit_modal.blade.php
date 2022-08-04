@@ -42,6 +42,19 @@
                     <input type="text" class="form-control" id="Denda" name="Denda" placeholder="Denda" value="{{ $post->Denda }}">
                 </div>
                 <div class="mb-3">
+                    <label for="status" class="form-label">Status</label>
+                    <div class="input-group">
+                        <select class="form-select" aria-label="Default select example" name="status" id="status"
+                            required>
+                            <option selected disabled>-- Pilih --</option>
+                            <option value="lunas">Lunas</option>
+                            <option value="belum_lunas">Belum Lunas</option>
+        
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3">
                     <label for="Jumlah" class="form-label">Jumlah Yang Dibayar</label>
                     <input type="text" class="form-control" id="Jumlah" name="Jumlah" placeholder="Jumlah" value="{{ $post->Jumlah }}">
                 </div>

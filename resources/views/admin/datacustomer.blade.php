@@ -27,7 +27,6 @@
                             <th>Alamat</th>
                             <th>RT</th>
                             <th>RW</th>
-                           
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -77,12 +76,6 @@
                             </td>
                         </tr>
                         @include('modal.editpelanggan_modal')
-                        @empty
-                        {{-- <tr class="text-center">
-                            <td colspan="6">
-                                Belum Ada Data
-                            </td>
-                        </tr> --}}
                         @endforelse
                     </tbody>
                 </table>

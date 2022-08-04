@@ -1,13 +1,12 @@
 @extends('layouts.dashboard')
-{{-- @section('title')
-    Barang Export
-@endsection --}}
 @section('content')
     <div class="row">
         <div class="col">
-            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="submit" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                <a href="/coba"></a>
                 Tambah Data
             </button>
+           
             @include('modal.add_data_modal')
         </div>
     </div>
@@ -23,6 +22,7 @@
                             <th>No</th>
                             <th>Nomor Rekening</th>
                             <th>Nama Pelanggan</th>
+                            <th>ID User</th>
                             <th>Alamat</th>
                             <th>Tanggal</th>
                             <th>Biaya Pemakaian</th>
@@ -30,6 +30,7 @@
                             <th>Pemeliharaan</th>
                             <th>Denda</th>
                             <th>Jumlah</th>
+                            <th>Status</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -37,14 +38,23 @@
                         @php
                         $no=1
                         @endphp
+                        
                         @forelse ($posts as $post)
+                        
                         <tr>
                             <td>{{$no++}}</td>
                             <td>
                                 {{ $post->Rekening}}
                             </td>
-                            <td>
+                            <td >
+                                {{-- neng kene --}}
+                                
                                 {{ $post->Nama}}
+                                
+                                
+                            </td>
+                            <td>
+                                {{$post->iduser}} 
                             </td>
                             <td>
                                 {{ $post->Alamat}}
@@ -66,6 +76,11 @@
                             </td>
                             <td>
                                 {{ $post->Jumlah}}
+                            </td>
+
+                            <td>
+                                {{ $post->status}}
+                               
                             </td>
                             <td>
                                 <div class="row">
@@ -105,10 +120,20 @@
                                 Belum Ada Data
                             </td>
                         </tr> --}}
+                        
                         @endforelse
+                       
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+    <script>
+        function onlyOne(checkbox) {
+        var checkboxes = document.getElementsByName('check')
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false
+        })
+        }
+    </script>
 @endsection

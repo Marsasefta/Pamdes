@@ -18,7 +18,8 @@ class TabelUntukPelanggan extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('Rekening');
-            $table->string('Nama');
+            $table->integer('iduser');
+          
             $table->string('Alamat');
             $table->date('tanggal');
             $table->string('Biaya');
@@ -26,6 +27,7 @@ class TabelUntukPelanggan extends Migration
             $table->string('Pemeliharaan');
             $table->string('Denda');
             $table->string('Jumlah');
+            $table->string('status')->nullable();
         });
     }
 

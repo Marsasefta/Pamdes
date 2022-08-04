@@ -44,54 +44,162 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion text-white" id="accordionSidebar">
+        <?php $cek = Auth::user()->role; ?>
+            @if($cek === 'administrator')
+                <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion text-white" id="accordionSidebar">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-text mx-3">ADMIN PAMDES</sup></div>
-            </a>
+                    <!-- Sidebar - Brand -->
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                        <div class="sidebar-brand-text mx-3">ADMIN PAMDES</sup></div>
+                    </a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+                    <!-- Divider -->
+                    <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="dashboard">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard Tagihan</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Data</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Data Master:</h6>
-                        <a class="collapse-item" href="datacustomer">Data Pelanggan PDAM</a>
-                        <a class="collapse-item" href="dataadmin">Admin Pengguna</a>
-                        {{-- <a class="collapse-item" href="forgot-password.html">Forgot Password</a> --}}
-                        <div class="collapse-divider"></div>
+                    <!-- Nav Item - Dashboard -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard">
+                            <i class="fas fa-fw fa-tachometer-alt"></i>
+                            <span>Dashboard Tagihan</span></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                            aria-expanded="true" aria-controls="collapsePages">
+                            <i class="fas fa-fw fa-folder"></i>
+                            <span>Data</span>
+                        </a>
+                        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Data Master:</h6>
+                                <a class="collapse-item" href="datacustomer">Data Pelanggan PDAM</a>
+                                <a class="collapse-item" href="dataadmin">Admin Pengguna</a>
+                                {{-- <a class="collapse-item" href="forgot-password.html">Forgot Password</a> --}}
+                                <div class="collapse-divider"></div>
+                            </div>
+                        </div>
+                    </li>
+                    {{-- <li class="nav-item">
+                        <a class="nav-link" href="datacustomer">
+                            <i class="fas fa-fw fa-users"></i>
+                            <span>Pelanggan</span></a>
+                    </li> --}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="rekap">
+                            <i class="fas fa-fw fa-book"></i>
+                            <span>Rekap Data</span></a>
+                    </li>
+                    <!-- Sidebar Toggler (Sidebar) -->
+                    <div class="text-center d-none d-md-inline mt-1">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
                     </div>
-                </div>
-            </li>
-            {{-- <li class="nav-item">
-                <a class="nav-link" href="datacustomer">
-                    <i class="fas fa-fw fa-users"></i>
-                    <span>Pelanggan</span></a>
-            </li> --}}
-            <li class="nav-item">
-                <a class="nav-link" href="rekap">
-                    <i class="fas fa-fw fa-book"></i>
-                    <span>Rekap Data</span></a>
-            </li>
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline mt-1">
-              <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
 
-          </ul>
+                </ul>
+            @endif
+
+            @if($cek === 'Kepala')
+                <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion text-white" id="accordionSidebar">
+
+                    <!-- Sidebar - Brand -->
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                        <div class="sidebar-brand-text mx-3">ADMIN PAMDES</sup></div>
+                    </a>
+
+                    <!-- Divider -->
+                    <hr class="sidebar-divider my-0">
+
+                    <!-- Nav Item - Dashboard -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard">
+                            <i class="fas fa-fw fa-tachometer-alt"></i>
+                            <span>Dashboard Tagihan</span></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                            aria-expanded="true" aria-controls="collapsePages">
+                            <i class="fas fa-fw fa-folder"></i>
+                            <span>Data</span>
+                        </a>
+                        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Data Master:</h6>
+                                <a class="collapse-item" href="datacustomer">Data Pelanggan PDAM</a>
+                                {{-- <a class="collapse-item" href="dataadmin">Admin Pengguna</a> --}}
+                                {{-- <a class="collapse-item" href="forgot-password.html">Forgot Password</a> --}}
+                                <div class="collapse-divider"></div>
+                            </div>
+                        </div>
+                    </li>
+                    {{-- <li class="nav-item">
+                        <a class="nav-link" href="datacustomer">
+                            <i class="fas fa-fw fa-users"></i>
+                            <span>Pelanggan</span></a>
+                    </li> --}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="rekap">
+                            <i class="fas fa-fw fa-book"></i>
+                            <span>Rekap Data</span></a>
+                    </li>
+                    <!-- Sidebar Toggler (Sidebar) -->
+                    <div class="text-center d-none d-md-inline mt-1">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                    </div>
+
+                </ul>
+            @endif
+
+            @if($cek === 'Staff')
+                <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion text-white" id="accordionSidebar">
+
+                    <!-- Sidebar - Brand -->
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                        <div class="sidebar-brand-text mx-3">ADMIN PAMDES</sup></div>
+                    </a>
+
+                    <!-- Divider -->
+                    <hr class="sidebar-divider my-0">
+
+                    <!-- Nav Item - Dashboard -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard">
+                            <i class="fas fa-fw fa-tachometer-alt"></i>
+                            <span>Dashboard Tagihan</span></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                            aria-expanded="true" aria-controls="collapsePages">
+                            <i class="fas fa-fw fa-folder"></i>
+                            <span>Data</span>
+                        </a>
+                        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Data Master:</h6>
+                                <a class="collapse-item" href="datacustomer">Data Pelanggan PDAM</a>
+                                {{-- <a class="collapse-item" href="dataadmin">Admin Pengguna</a> --}}
+                                {{-- <a class="collapse-item" href="forgot-password.html">Forgot Password</a> --}}
+                                <div class="collapse-divider"></div>
+                            </div>
+                        </div>
+                    </li>
+                    {{-- <li class="nav-item">
+                        <a class="nav-link" href="datacustomer">
+                            <i class="fas fa-fw fa-users"></i>
+                            <span>Pelanggan</span></a>
+                    </li> --}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="rekap">
+                            <i class="fas fa-fw fa-book"></i>
+                            <span>Rekap Data</span></a>
+                    </li>
+                    <!-- Sidebar Toggler (Sidebar) -->
+                    <div class="text-center d-none d-md-inline mt-1">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                    </div>
+
+                </ul>
+            @endif
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->

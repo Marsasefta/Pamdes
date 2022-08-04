@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Pelanggan;
 use App\User;
+use Auth;
+
 
 class HomeController extends Controller
 {
@@ -14,7 +16,7 @@ class HomeController extends Controller
      * @return void
      */
 
-
+    
 
     /**
      * Show the application dashboard.
@@ -23,8 +25,13 @@ class HomeController extends Controller
      */
     public function index()
     {
+        
         $datas = Pelanggan::get();
         return view('home', ['datas' => $datas]);
+
+        // $datas = Pelanggan::where('id', Auth::user()->id)->get();
+        // return view('home', ['datas' => $datas]);
+
 
     }
 

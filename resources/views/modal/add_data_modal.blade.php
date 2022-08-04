@@ -12,9 +12,18 @@
                 <label for="Rekening" class="form-label">Nomor Rekening</label>
                 <input type="number" class="form-control" id="Rekening" name="Rekening" placeholder="No. rekening" required>
             </div>
-            <div class="mb-3">
+            {{-- <div class="mb-3">
                 <label for="Nama" class="form-label">Nama Pelanggan</label>
                 <input type="text" class="form-control" id="Nama" name="Nama" placeholder="Nama" required>
+            </div> --}}
+            <div class="mb-3">
+                <label for="iduser" class="form-label">Id Pelanggan</label>
+                <select class="form-control select2" name="iduser" id="iduser" style="width: 100%" >
+                    <option disabled>Id Pelanggan</option>
+                    @foreach ($users as $user)
+                    <option value="{{ $user->id }}">{{$user->id}} ({{$user->name}})</option>
+                    @endforeach
+                    </select>
             </div>
             <div class="mb-3">
                 <label for="Alamat" class="form-label">Alamat</label>
