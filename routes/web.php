@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 
 
 /*
@@ -19,6 +20,9 @@ use App\Http\Controllers\RegisterController;
         return view('home');
     });
 
+    // Route::get('/', function () {
+    //     return view('auth.login');
+    // });
    
     
     Route::get('/login',function () {
@@ -42,18 +46,16 @@ use App\Http\Controllers\RegisterController;
     Route::put('/editdata/{id}', 'DatacustomerController@update');
     Route::get('/cetakrekap/{start_date}/{end_date}', 'AdminController@cetak')->name('cetakrekap');
     Route::post('/adduser', 'AdminController@adduser');
-    
-
+    Route::get('/halaman-pelanggan', 'PelangganPAMController@index')->middleware('auth');
     Route::delete('/deletepost/{id}', 'AdminController@destroy')->name('deletepost');
-
     Route::delete('/deleteadmin/{id}', 'AdminController@delete')->name('deleteadmin');
 
     Route::delete('/delete/{id}', 'DatacustomerController@destroy')->name('delete');
-    
-
     Route::put('/editdata/{id}', 'AdminController@update');
     Route::put('/editadmin/{id}', 'HomeController@update');
     Route::get('/detailuser/{id}', 'AdminController@detail')->name('detailuser');
+
+    Route::get('/logout', 'LoginController@logout')->name('logout');
     
 
 Route::resources([
@@ -65,5 +67,3 @@ Route::resources([
     // Route::group(['middleware' => ['auth','ceklevel:admin,Kepala,Staff']], function(){
         
     // });
-
-    Route::get('/rules', 'HomeController@rules');

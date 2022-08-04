@@ -1,16 +1,7 @@
 @extends('layouts.dashboard')
-{{-- @section('title')
-    Barang Export
-@endsection --}}
+
 @section('content')
-    {{-- <div class="row">
-        <div class="col">
-            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Tambah Data
-            </button>
-            @include('modal.add_data_modal')
-        </div>
-    </div> --}}
+
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Rekap Tagihan Bulanan Customer</h6>

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>     Invoice Pembayaran</title>
+		<title>Invoice Pembayaran</title>
 
 		<style>
 			.invoice-box {
@@ -99,7 +99,7 @@
 		</style>
 	</head>
 
-	<body onload="">
+	<body onload="window.print()">
 		<div class="invoice-box">
 			<table cellpadding="0" cellspacing="0">
 				<tr class="top">
@@ -142,7 +142,6 @@
                     </td>
 				</tr>
                
-
 				<tr class="heading">
 					<td>Pemakaian</td>
 
@@ -181,61 +180,3 @@
 		</div>
 	</body>
 </html>
-
-
-{{-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <title>Detail Tagihan</title>
-</head>
-<body >
-    <div class="card">
-       
-        <div class="container mt-5 p-5 border" >
-       
-            <div class="row">
-            
-                <div class="card-header py-3 text-center">
-                    
-                    <h6 class=" font-weight-bold  text-center">Detail Invoice Tagihan Bulanan PDAM</h6>
-                </div>
-                    <div class="col-4" style="padding-left: 0px;  padding-right: 0px;">
-                    
-                        <table>
-                            <tr>
-                                <th style="min-width: 180px;">Nomor Rekening:</th>
-                                <td>{{ $post->Rekening }}</td>
-                            </tr>
-                            <tr>
-                                <th style="min-width: 180px;">Nama Pelanggan:</th>
-                                <td>{{ $post->Nama }}</td>
-                            </tr>
-                            <tr>
-                                <th style="min-width: 180px;">Tanggal Tagihan:</th>
-                                <td>{{ $post->tanggal }}</td>
-                            </tr>
-                            <tr>
-                                <th style="min-width: 180px;">Jumlah Tagihan:</th>
-                                <td>{{ $post->Jumlah }}</td>
-                            </tr>
-                        
-                        </table>
-                    </div>
-            </div>
-        </div>
-    </div>
-
-        @push('scripts')
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-            crossorigin="anonymous">
-        </script>
-        @endpush
-</body>
-</html>
- --}}
